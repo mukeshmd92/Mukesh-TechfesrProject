@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>navigation</title>
+  <!-- Include Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+     /* <!-- Top Fixed Navbar --> */
+ /* Basic Reset */
+ 
+    /* Main navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #ff6347; /* Accent color */
+}
+
+.logo {
+    height: 50px;
+}
+
+/* Menu icon */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+}
+
+
+  </style>
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <div class="menu-icon" id="menuIcon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <img src="./techlogo-removebg-preview.png" alt="TechFest Logo" class="logo">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+    // Get the menu icon and the navigation menu
+const menuIcon = document.getElementById('menuIcon');
+const navMenu = document.getElementById('navMenu');
+
+// Toggle the active class to show/hide the menu
+menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    // Change the icon between hamburger and cross
+    menuIcon.innerHTML = navMenu.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' // Cross icon
+        : '<i class="fas fa-bars"></i>';  // Hamburger icon
+});
+</script>
+
+
+</body>
+</html>

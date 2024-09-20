@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFest - Contact</title>
+     <style>
+        /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 100;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #ff6347;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Media Queries for Responsive Behavior */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.coordinator {
+    background-color: #ff6347;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coordinator h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.coordinator p {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+/* Registration Form */
+form {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Bottom Social Media Bar */
+.bottom-navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.bottom-navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-navbar ul li {
+    margin: 0 15px;
+}
+
+.bottom-navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.bottom-navbar ul li a:hover {
+    color: #ff6347;
+}
+
+     </style>
+</head>
+<body>
+      <!-- Top Fixed Navbar -->
+      <header class="navbar">
+        <nav>
+            <div class="logo-container">
+                <img src="./looka-fest-removebg-preview 111111111111.png" alt="TechFest Logo" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+<!-- Contact Section -->
+<section class="contact-section">
+    <h2>Contact Us</h2>
+
+    <div class="coordinator">
+        <h3>COORDINATOR</h3>
+        <p>Name: Himanshu Bhusan Mahapatra</p>
+        <p>Designation: Dept.of ECE</p>  
+        <p>Contact: +91 7978552954</p>
+    </div>
+    <div class="coordinator">
+        <h3>CO-COORDINATOR</h3>
+        <p>Name: Irani Majumdar</p>
+        <p>Designation: Dept.of AIML</p>  
+        <p>Contact: +91 7008848775</p>
+    </div>
+   
+    <div class="coordinator">
+        <h3>CERTIFICATION TEAM</h3>
+        <p>Name: Binayak Mishra</p>
+        <p>Designation: Prof. Dibyalisha Rath</p>  
+        <p>Designation: Baisakhi Sahoo</p>
+    </div>
+    <div class="coordinator">
+        <h3>WEBSITE EXECUTIVE</h3>
+        <p>Name: Vivek Kumar Ray</p>
+        <p>Branch: CSE</p>  
+        <p>Contact: +91 7846896259</p>
+    </div>
+
+    <!-- Registration Form -->
+    <h2>Register Here</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd_Uoe0mWvrEiYIpBkIBywfbsXbC8q2V5jfSKD_aLt69wMpIA/viewform?embedded=true" width="640" height="963" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</section>
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('toggle');
+        });
+    </script>
+</body>
+</html>
